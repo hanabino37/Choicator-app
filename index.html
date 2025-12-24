@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Choicator</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+
+    <div id="menu-screen" class="screen">
+        <h1 class="title">Choicator</h1>
+        <p class="description">迷えるあなたに代わって決断します。</p>
+
+        <div class="input-group">
+            <input type="text" id="choice-a" placeholder="選択肢 A ">
+            <input type="text" id="choice-b" placeholder="選択肢 B ">
+        </div>
+
+        <button id="start-btn" class="btn primary-btn">JUDGMENT</button>
+    </div>
+
+    <div id="game-screen" class="screen hidden">
+        <div class="game-visual-container">
+            <div class="character-area">
+                <img id="character-img" src="image_0.jpg" class="character-display" alt="Character">
+            </div>
+            <div class="question-area">
+                <p id="question-text">質問テキスト</p>
+            </div>
+        </div>
+
+        <div class="action-area">
+            <button class="btn answer-btn" data-answer="yes">YES</button>
+            <button class="btn answer-btn" data-answer="no">NO</button>
+        </div>
+    </div>
+
+    <div id="result-screen" class="screen hidden">
+        <h2 class="result-title">分析完了。</h2>
+        <p class="result-label">運命の選択は…</p>
+
+        <div id="final-result" class="result-display">
+        </div>
+
+        <button id="retry-btn" class="btn secondary-btn">もう一度決める</button>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+
+</html>
